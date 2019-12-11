@@ -1,19 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-link v-bind:to="'/'">Home</router-link><br>
+    <router-link v-bind:to="'/about'">About Vue</router-link>
+    <!-- <a href="/"></a> -->
+    <router-view usr="Fredrik"></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// We dont need this one anymore, since we get it in our main.js instead
+// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
+  // Same with this one, no need for it.
+  // components: {
+  //   HelloWorld
+  // }
 }
+
 </script>
 
 <style>
